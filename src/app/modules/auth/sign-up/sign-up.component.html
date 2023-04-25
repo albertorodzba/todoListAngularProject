@@ -1,0 +1,45 @@
+<div class="loginWrapper">
+  <h1>SIGN UP</h1>
+  <form action="" (ngSubmit)="signUp()" class="login-form">
+    <label for="fullname">Full name</label>
+    <input
+      [(ngModel)]="full_Name"
+      type="text"
+      name="full_Name"
+      id="full_Name"
+      autocomplete="off"
+      placeholder="Mario Alberto Rodriguez Bautista"
+    />
+
+    <label for="email">Email</label>
+    <input
+      [(ngModel)]="email"
+      type="email"
+      name="email"
+      id="email"
+      autocomplete="off"
+      placeholder="mario@hotmail.com"
+    />
+
+    <label for="password">Password</label>
+    <input
+      [(ngModel)]="password"
+      type="password"
+      name="password"
+      id="password"
+      autocomplete="off"
+      placeholder="password1234"
+    />
+
+    <label for="passwordVerification">Password Verification</label>
+    <input
+      [(ngModel)]="passwordVerification"
+      type="password"
+      name="passwordVerification"
+      id="passwordVerification"
+      autocomplete="off"
+      placeholder="password1234"
+    />
+    <button type="submit">Sign In</button>
+  </form>
+</div>

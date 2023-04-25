@@ -1,20 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
+import { TodoItemComponent } from './components/todo-item/pages/todo-item.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 @NgModule({
   declarations: [
+    AboutComponent,
+    HomeComponent,
     LoginComponent,
-    HomeComponent
+    SignUpComponent,
+    TodoItemComponent,
+    DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
+  providers:[],
   exports:[
-    HomeComponent
+
   ]
 })
 export class ModulesModule { }

@@ -1,0 +1,10 @@
+.item-container {
+  background-image: url("../../../../assets/notepad-svgrepo-com.svg");
+  background-size: cover;
+  background-position: center;
+  width: 18rem;
+  height: 25rem;
+}
+p{
+    color: red;
+}
