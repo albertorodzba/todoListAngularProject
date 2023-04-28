@@ -1,10 +1,14 @@
-<nav class="navbar1">
-    <div class="title">TODO LIST</div>
-    <ul class="optionsWrapper">
+<nav class="nav-bar">
+    <h1 class="title">TODO LIST {{screenSize}}</h1>
+    <ul [ngClass]="{'optionsWrapperResponsive':menuVisible, 'optionsWrapper': menuVisible ? false : true}" class="optionsWrapper">
         <li><a>Sign in</a></li>
         <li><a>Sign up</a></li>
         <li><a>Home</a></li>
         <li><a>About</a></li>
         <li><a>Logout</a></li>
     </ul>
+    <div (click)="showMenu()" class="icon-menu">
+        <img src="../../../assets/icons8-menú.svg" alt="">
+    </div>
+
 </nav>

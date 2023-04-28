@@ -5,9 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AuthService } from './modules/auth/services/auth.service';
+import { AuthService } from './core/services/auth/auth.service';
 import { ModulesModule } from './modules/modules.module';
 import { LayoutModule } from './layout/layout.module';
+
+import { TodoItemsService } from './core/services/todoItems/todo-items.service';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { LayoutModule } from './layout/layout.module';
     ModulesModule,
     LayoutModule
   ],
-  providers: [{provide: 'IAuthService', useClass: AuthService}],
+  providers: [{provide: 'IAuthService', useClass: AuthService},
+  {provide: 'ITodoItemService', useClass: TodoItemsService}
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { IAuthService } from 'src/app/interfaces/IAuthService';
-import { User } from 'src/app/schema/user.interface';
+import { User } from 'src/app/schema/User.interface';
 
 @Component({
   selector: 'app-login',

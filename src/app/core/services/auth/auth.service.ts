@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { IAuthService } from 'src/app/interfaces/IAuthService';
-import { User } from 'src/app/schema/user.interface';
+import { User } from 'src/app/schema/User.interface';
 
 @Injectable({
   providedIn: 'root',

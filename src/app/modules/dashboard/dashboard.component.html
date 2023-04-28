@@ -1,4 +1,12 @@
 <form>
-    <button type="submit">Add new Item</button>
+    <button type="submit" (click)="state()">Add new Item</button>
 </form>
-<app-todo-item></app-todo-item>
+
+<p>todo-item workss!</p>
+<div *ngFor="let item of todoItems" class="item-container">
+  <h2>{{item.toDo}}</h2>
+  <p>No description</p>
+  <p>{{item.task_Created}}</p>
+</div>
+
+<app-add-edit-modal *ngIf="isOpen === true" (modalStateEmitter)="onCloseModal($event)" (todoEmitter)="addElement($event)"></app-add-edit-modal>

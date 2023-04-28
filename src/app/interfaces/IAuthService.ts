@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-import { User } from '../schema/user.interface';
+import { User } from '../schema/User.interface';
 
 export interface IAuthService {
   logIn(data: User): void;

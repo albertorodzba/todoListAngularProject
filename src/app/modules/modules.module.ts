@@ -5,8 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
-import { TodoItemComponent } from './components/todo-item/pages/todo-item.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddEditModalComponent } from './components/add-edit-modal/add-edit-modal.component';
 
 
 
@@ -16,8 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    TodoItemComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddEditModalComponent
   ],
   imports: [
     CommonModule,
