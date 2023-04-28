@@ -1,3 +1,4 @@
+/*NAVIGATION BAR*/
 .nav-bar {
   display: flex;
   align-items: center;
@@ -7,6 +8,7 @@
   height: 5rem;
   color: var(--white);
 
+  padding: 0 1rem 0 1rem;
 }
 
 .title {
@@ -20,32 +22,29 @@
   align-items: center;
   list-style-type: none;
 }
+/*styles when screen < 769*/
 
-.optionsWrapperResponsive{
-   
-    background-color: var(--white);
-    border-radius: 3px;
-    box-shadow: 2px 2px 5px 1px var(--shadow);
-    color: var(--gray);
-    display: block;
-    position: absolute;
-    list-style-type: none;
-    padding: 0;
-    /* top: 5rem;
-    left: 39.5rem; */
-    top: 9%;
-    left: 82%;
+/*The options change to this style when screen < 769*/
+.dropdown {
+  background-color: var(--white);
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 1px var(--shadow);
+  color: var(--gray);
 
-
+  list-style-type: none;
+  padding: 0;
 }
 
-.optionsWrapperResponsive > li {
-    border-bottom: 1px solid var(--gray);
-    padding: 0.5em 1em;
-    margin-inline-end: 2em;
-    width: 100%;
-  }
+.dropdown > li {
+  border-bottom: 1px solid var(--gray);
+  padding: 0.5em 1em;
+  margin-inline-end: 2em;
+  width: 100%;
+}
 
+/*Options style*/
+/*When screen > 768 is .optionsWrapper*/
+/*When screen < 768 is .dropdown*/
 .optionsWrapper > li {
   border: 1px solid var(--white);
   border-radius: 4px;
@@ -58,7 +57,7 @@
   color: var(--gray);
 }
 
-.icon-menu {
+.dropdownContainer {
   display: none;
 }
 
@@ -71,8 +70,11 @@ img {
     display: none;
   }
 
+  .dropdownContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .icon-menu {
-    display: block;
     border: 1px solid var(--white);
     border-radius: 4px;
     padding: 0.3em 0.6em;
@@ -83,5 +85,4 @@ img {
     background-color: var(--white);
     color: var(--gray);
   }
-
 }
