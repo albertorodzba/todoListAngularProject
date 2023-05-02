@@ -1,0 +1,29 @@
+.modal-container {
+  width: 100%;
+    padding: 1em;
+}
+h2{
+    text-align: center;
+}
+.modal-container > .modal-form {
+  column-gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 100%;
+}
+.modal-form > *{
+    min-width: 0px;
+}
+
+.form-field {
+  grid-column: span 2;
+  width: 100%;
+}
+
+@media (max-width: 424px){
+    .action{
+        font-size: 10px;
+        height: 40px;
+    }
+}

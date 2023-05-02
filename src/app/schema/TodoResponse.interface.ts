@@ -5,8 +5,9 @@ export interface TodoResponse{
 
 export interface Item {
     id?: number;
+    title: string;
     toDo: string;
     task_Created?: Date;
     completed?: boolean;
-    userId: number;
+    userId?: number;
 }

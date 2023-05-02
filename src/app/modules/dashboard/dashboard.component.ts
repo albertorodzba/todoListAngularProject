@@ -10,7 +10,7 @@ import { Item } from 'src/app/schema/TodoResponse.interface';
 export class DashboardComponent implements OnInit {
   isOpen: boolean = false;
   todoItems: Item[] = [];
-  private userID: number = 0;
+  private title: string = '';
   private todo: string = '';
 
   constructor(
@@ -50,8 +50,8 @@ export class DashboardComponent implements OnInit {
     this._todoItemService.addItem(item).subscribe({
       next: (response: Item) => {
         this.todo = response.toDo;
-        this.userID = response.userId;
-        this.Items.push({userId: this.userID, toDo: this.todo})
+        this.title = response.title;
+        this.Items.push({title: this.title, toDo: this.todo})
         console.log("ELEMENT ADDED "+response.toDo)
       },
       error: (error) => console.log(`There was an error => ${error}`)

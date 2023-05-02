@@ -1,11 +1,73 @@
+.list-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2em;
+  row-gap: 2em;
+  padding: 1em;
+}
 .item-container {
-    background-image: url("../../../assets/notepad-svgrepo-com.svg");
-    background-size: cover;
-    background-position: center;
-    width: 18rem;
-    height: 25rem;
+  /* background-image: url("../../../assets/notepad-svgrepo-com.svg");
+  background-size: cover;
+  background-position: center; */
+  /* border: 1px solid var(--navbar); */
+
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 30px 20px 10px var(--shadow);
+  overflow: hidden;
+}
+
+
+/* height: 25rem;
+width: 18rem; */
+
+.title {
+  background-color: var(--secondary-red);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  padding: 2em 1em;
+  overflow: hidden;
+}
+.content {
+  padding: 1em;
+}
+
+.title > h2 {
+  font-size: 16px;
+  font-weight: 700;
+  /* margin: 1em 0; */
+  text-align: center;
+}
+
+.modalWindow{
+  background-color: var(--white);
+  border-radius: 20px;
+  /* transform: translate(-50%, -50%);  */
+  left: 25%;
+  position: absolute;
+  top: 25%;
+  width: 50%;
+}
+
+.list-items-blur{
+  filter: blur(3px);
+}
+
+p {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .list-items {
+    grid-template-columns: repeat(2, 1fr);
   }
-  p{
-      color: red;
+}
+
+@media (min-width: 769px) and (max-width: 1220px) {
+  .list-items {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
+}

@@ -8,7 +8,7 @@ import { Item } from 'src/app/schema/TodoResponse.interface';
 })
 export class AddEditModalComponent {
   isModalOpen: boolean = true;
-  userID: number = 0;
+  title: string = "";
   todo: string = '';
 
   @Output()
@@ -21,10 +21,10 @@ export class AddEditModalComponent {
   }
 
   addTodo(): void {
-    if (this.userID === 0 || this.userID === null || this.todo === '')
-      return alert('Empty fields are not allowed' + this.userID + " " + this.todo);
+    if (this.title === "" || this.title === null || this.todo === '')
+      return alert('Empty fields are not allowed' + this.title + " " + this.todo);
 
-    this.todoEmitter.emit({ toDo: this.todo, userId: this.userID });
+    this.todoEmitter.emit({ toDo: this.todo, title: this.title });
     this.modalStateEmitter.emit(!this.isModalOpen);
   }
 }

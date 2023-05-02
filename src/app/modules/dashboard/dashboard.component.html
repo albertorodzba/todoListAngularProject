@@ -1,12 +1,25 @@
-<form>
+<div class="main-container" [ngClass]="{ 'list-items-blur': isOpen }">
+  <form>
     <button type="submit" (click)="state()">Add new Item</button>
-</form>
+  </form>
 
-<p>todo-item workss!</p>
-<div *ngFor="let item of todoItems" class="item-container">
-  <h2>{{item.toDo}}</h2>
-  <p>No description</p>
-  <p>{{item.task_Created}}</p>
+  <div class="list-items">
+    <div *ngFor="let item of todoItems" class="item-container">
+      <div class="title">
+        <h2>{{ item.toDo }}</h2>
+      </div>
+
+      <div class="content">
+        <p>No description</p>
+        <p>{{ item.task_Created }}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<app-add-edit-modal *ngIf="isOpen === true" (modalStateEmitter)="onCloseModal($event)" (todoEmitter)="addElement($event)"></app-add-edit-modal>
+<app-add-edit-modal
+  class="modalWindow"
+  *ngIf="isOpen === true"
+  (modalStateEmitter)="onCloseModal($event)"
+  (todoEmitter)="addElement($event)"
+></app-add-edit-modal>

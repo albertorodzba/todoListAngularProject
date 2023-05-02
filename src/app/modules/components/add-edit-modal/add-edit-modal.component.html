@@ -1,8 +1,27 @@
-<div class="form-modal">
-    <form action="" class="add-edit" (ngSubmit)="addTodo()">
-        <textarea style="height: 5rem; resize: none;" type="text" class="data todo" name="todo" [(ngModel)] = "todo">Write the todo</textarea> 
-        <input type="number" class="data userID" name="userID" [(ngModel)] = "userID"/>
-        <button type="submit" class="action cancel" (click)="closeModal()">Cancel</button>
-        <button type="submit" class="action submit" >Submit</button>
-    </form>
+<div class="modal-container">
+  <h2>ADD A NEW TO DO</h2>
+  <form action="" class="modal-form" (ngSubmit)="addTodo()">
+    <div class="form-field">
+      <label>Title:</label>
+      <input type="text" class="data title" name="title" [(ngModel)]="title" />
+    </div>
+
+    <div class="form-field">
+      <label>Description:</label>
+      <textarea
+        style="height: 5rem; resize: none"
+        type="text"
+        class="data todo"
+        name="todo"
+        [(ngModel)]="todo"
+      >
+         Write the todo 
+        </textarea
+      >
+    </div>
+    <button type="submit" class="action cancel" (click)="closeModal()">
+      Cancel
+    </button>
+    <button type="submit" class="action submit">Submit</button>
+  </form>
 </div>

@@ -1,0 +1,41 @@
+h1{
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+.signupWrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 0;
+    width: 100%;
+}
+
+.signup-form{
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 70%;
+
+}
+.form-element{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.signup-form > *{
+    grid-column: span 2;
+
+}
+
+
+.form-element:nth-last-of-type(1),
+.form-element:nth-last-of-type(2){
+    grid-column: span 1;    
+    
+}
+
+button{
+    grid-column: span 2;
+}

@@ -1,25 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import "./app/modules/todo-item/todo-item.component.css"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
 :root{
-    --navbar: #F4322D;
-    --white: #f8f8f8;
-    --green: #6BE868;
-    --blue: #66B7FF;
-    --pink: #E937FA;
+    --blue: #2C7DF5;
+    --green: #D2F55D;
     --gray: rgb(47 47 47);
+    --navbar: #BD301C;
+    --secondary-blue: #275BA8;
+    --secondary-red: #ed4833;
     --shadow: #d6d6d6;
+    --white: #f8f8f8;
 }
 
+
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 html, body{
-    background-color: blue/*var(--white)*/;
+    background-color: var(--white);
     box-sizing: border-box;
 }
 
 li{
     cursor: pointer;
+}
+
+hr{
+    margin: 0;
+}
+
+h1{
+    font-weight: 600;
+}
+h2,h1{
+    margin: 0;
+}
+
+
+/*FORMS*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+button{
+    border:none;
+    border-radius: 10px ;
+    background-color: var(--navbar);
+    color: var(--white);
+    padding: 0.5em;
+    
+}
+button:hover{
+    background-color: var(--secondary-red);
+}
+
+input, textarea{
+    border: 1px solid var(--secondary-red);
+    border-radius: 10px;
+    margin-bottom: 2em;
+    padding: 0.5em 1em;
+    outline: var(--navbar);
+    width: 100%;
+}
+
+label{
+    margin-bottom: 0.5em;
 }

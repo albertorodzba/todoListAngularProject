@@ -12,6 +12,7 @@ import { LayoutModule } from './layout/layout.module';
 import { TodoItemsService } from './core/services/todoItems/todo-items.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +22,11 @@ import { TodoItemsService } from './core/services/todoItems/todo-items.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
+
     ModulesModule,
     LayoutModule
+
   ],
   providers: [{provide: 'IAuthService', useClass: AuthService},
   {provide: 'ITodoItemService', useClass: TodoItemsService}
