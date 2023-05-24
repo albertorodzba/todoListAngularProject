@@ -1,3 +1,6 @@
+# Possible problem
+If you get a problem related with incompatibility, clean cache first and then execute npm install, or create the project again
+
 # AngularTodoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
